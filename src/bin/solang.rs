@@ -190,7 +190,7 @@ fn compile(compile_args: &Compile) {
     }
 }
 
-fn shell_complete(mut app: Command, args: ShellComplete) {
+pub fn shell_complete(mut app: Command, args: ShellComplete) {
     let name = app.get_name().to_string();
     generate(args.shell_complete, &mut app, name, &mut std::io::stdout());
 }
